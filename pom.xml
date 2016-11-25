@@ -5,6 +5,19 @@
   <groupId>com.appium.facebook</groupId>
   <artifactId>androidUISelectorJenkins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+        <configuration>
+			<PlatformName>${value}</PlatformName>
+			<PlatofrmVersion>${value}</PlatofrmVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <packaging>jar</packaging>
 
   <name>androidUISelectorJenkins</name>
