@@ -13,7 +13,7 @@
         <version>2.19.1</version>
         <configuration>
 			<PlatformName>${value}</PlatformName>
-			<PlatofrmVersion>${value}</PlatofrmVersion>
+			<PlatformVersion>${value}</PlatformVersion>
         </configuration>
       </plugin>
     </plugins>

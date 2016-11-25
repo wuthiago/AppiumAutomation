@@ -16,7 +16,7 @@ public class FBSanityJenkinsTest {
 	public void Setup(){
 		try {
 			tasks.setAppDirectory("C:\\Users\\IBM_ADMIN\\Downloads\\Facebook", "facebook-89.0.0.17.70-x86.apk");
-			tasks.setCapabilities(System.getProperty("PlatformName"),System.getProperty("PlatormVersion"),"Android Emulator","com.facebook.katana","dbl.activity.FacebookLoginActivity");
+			tasks.setCapabilities(System.getProperty("PlatformName"),System.getProperty("PlatformVersion"),"Android Emulator","com.facebook.katana","dbl.activity.FacebookLoginActivity");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
