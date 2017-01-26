@@ -56,7 +56,8 @@ public class FacebookUtilJenkinsTasks {
 	
 	//Método para publicar um Post no Facebook
 	public void publishPost(String content) throws InterruptedException{
-		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/feed_composer_status_button\").text(\"STATUS\")").click();
+		//driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/feed_composer_status_button\").text(\"STATUS\")").click();
+		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/feed_composer_hint\").text(\"What's on your mind?\")").click();
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/status_text\")").sendKeys(content);
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/primary_named_button\").text(\"POST\")").click();
 		// Verificando o post publicado
