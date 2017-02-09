@@ -49,6 +49,9 @@ public class FacebookUtilJenkinsTasks {
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_password\")").click();
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_password\")").sendKeys(password);
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_login\").text(\"LOG IN\")").click();
+		// condiçao para sair da tela de Log In With One Tap
+		if (driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/title\").text(\"Log In With One Tap\")").isDisplayed())
+			driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/dbl_off\").text(\"Not Now\")").click();
 		//Verificando pelo texto What's on your mind? para ter a certeza que o home screen do Facebook foi mostrado
 		Assert.assertEquals("What's on your mind?", driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/feed_composer_hint\").text(\"What's on your mind?\")").getText());
 		Thread.sleep(10000);
